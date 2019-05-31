@@ -15,20 +15,27 @@
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
+      '@angular/common/http': 'npm:@angular/common/bundles/common-http.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
       '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',
       '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
-      '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      '@angular/platform-browser/animations': 'npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js',
+      '@angular/animations/browser': 'npm:@angular/animations/bundles/animations-browser.umd.js',
+      '@angular/animations': 'npm:@angular/animations/bundles/animations.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
-      'angular-calendar': 'npm:angular-calendar/dist/umd/angular-calendar.js',
-      'calendar-utils': 'npm:calendar-utils/dist/umd/calendarUtils.js',
-      'angular-resizable-element': 'npm:angular-resizable-element/dist/umd/angular-resizable-element.js',
-      'angular-draggable-droppable': 'npm:angular-draggable-droppable/dist/umd/angular-draggable-droppable.js',
-      'date-fns': 'npm:date-fns'
+      'angular-calendar': 'npm:angular-calendar/bundles/angular-calendar.umd.js',
+      'angular-calendar/date-adapters/date-fns': 'npm:angular-calendar/date-adapters/date-fns/index.js',
+      'calendar-utils': 'npm:calendar-utils/bundles/calendar-utils.umd.js',
+      'calendar-utils/date-adapters/date-fns': 'npm:calendar-utils/date-adapters/date-fns/index.js',
+      'angular-resizable-element': 'npm:angular-resizable-element/bundles/angular-resizable-element.umd.js',
+      'angular-draggable-droppable': 'npm:angular-draggable-droppable/bundles/angular-draggable-droppable.umd.js',
+      'date-fns': 'npm:date-fns',
+      'positioning': 'npm:positioning/dist/umd/positioning.js',
+      'tslib': 'npm:tslib'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -37,6 +44,11 @@
         defaultExtension: 'js'
       },
       rxjs: {
+        main: 'index.js',
+        defaultExtension: 'js'
+      },
+      'rxjs/operators': {
+        main: 'index.js',
         defaultExtension: 'js'
       },
       'angular-in-memory-web-api': {
@@ -46,6 +58,9 @@
       'date-fns': {
         main: './index.js',
         defaultExtension: 'js'
+      },
+      tslib: {
+        main: './tslib.js'
       }
     }
   });

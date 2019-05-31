@@ -5,9 +5,11 @@ import css from 'rollup-plugin-css-only'
 import * as ts from 'typescript';
 
 export default {
-  entry: 'app/app.main.ts',
-  sourceMap: true,
-  moduleName: 'main',
+  input: 'app/app.main.ts',
+  output: {
+    name: 'main',
+    sourcemap: true
+  },
   plugins: [
     typescript({
       typescript: ts
@@ -16,6 +18,6 @@ export default {
     commonjs({
       include: 'node_modules/**'
     }),
-    css({ output: 'dist/bundle.css' })
+    css({ output: __dirname + '/dist/bundle.css' })
   ]
 };
